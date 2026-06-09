@@ -1,0 +1,19 @@
+font=Iosevka Nerd Font Propo 10
+
+background-color=#295c9d
+text-color=#ffffff
+
+max-visible=5
+sort=-time
+layer=top
+anchor=top-right
+
+format=<b>%s</b>\n%b
+
+default-timeout=5000
+
+[urgency=high]
+default-timeout=0
+
+[urgency=low]
+default-timeout=3000

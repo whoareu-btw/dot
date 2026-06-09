@@ -1,0 +1,69 @@
+# Plugins
+#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -Uz compinit
+compinit
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+# Setopt
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt AUTO_CD
+
+# Bindkey
+bindkey -e
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Prompt
+autoload -Uz colors && colors
+PROMPT='%F{blue}%n@%m%f ✦  %F{cyan}%~%f
+❯ '
+
+# Tmux
+#if [[ -z "$TMUX" && -n "$PS1" ]]; then
+#	if tmux has-session 2>/dev/null; then
+#		exec tmux attach-session
+#	else
+#		exec tmux new-session
+#	fi
+#fi
+
+# Sudo
+alias lick='sudo'
+
+# Ls
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Sway
+alias sconf='nvim .config/sway/config'
+
+# Waybar
+alias wbconf='nvim .config/waybar'
+alias wbcss='nvim .config/waybar/style.css'
+
+# Tmux
+alias tconf='nvim .tmux.conf'
+
+# Fastfetch
+alias ff='fastfetch'
+
+# Btop
+alias b='btop'
+
+# Flatpak
+alias flist='flatpak list'
+alias fup='flatpak update'
+alias fin='flatpak install flathub'
+alias frm='flatpak remove'
+alias frmu='flatpak remove --unused'
+alias fkill-firefox='flatpak kill org.mozilla.firefox'
+alias fkill-steam='flatpak kill com.valvesoftware.Steam'
+alias fkill-discord='flatpak kill com.discordapp.Discord'
