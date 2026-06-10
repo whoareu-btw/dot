@@ -87,6 +87,9 @@
       orchis-theme
       google-cursor
       nwg-look
+      grim
+      slurp
+      autotiling
       
       (papirus-icon-theme.override {
          color = "black";
