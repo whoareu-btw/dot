@@ -22,3 +22,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
   end,
 })
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+
+vim.opt.expandtab = true
+
+vim.opt.softtabstop = 2
+vim.opt.smarttab = true
+
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
+vim.opt.backspace = { "indent", "eol", "start" }
