@@ -83,7 +83,7 @@
                     nvim-tree-lua
                     nvim-web-devicons
                     nvim-treesitter-context
-		    nvim-cmp
+		            nvim-cmp
                     cmp-nvim-lsp
                     cmp-path
                     cmp_luasnip 
