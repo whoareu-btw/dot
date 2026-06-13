@@ -80,8 +80,8 @@
             end,
           },
           mapping = cmp.mapping.preset.insert({            
-            ['<M-q>'] = cmp.mapping.abort(),                    
-            ['<M-w>'] = cmp.mapping.confirm({ select = true }),
+            ['<Esc>'] = cmp.mapping.abort(),                    
+            ['<CR>'] = cmp.mapping.confirm({ select = true }),
             
             ['<Tab>'] = cmp.mapping(function(fallback)
               if cmp.visible() then
