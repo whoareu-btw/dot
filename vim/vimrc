@@ -1,0 +1,15 @@
+filetype plugin indent on
+set number
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set smartindent
+
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+
+inoremap <expr> <CR> getline('.')[col('.')-2:col('.')-1] ==# '{}' ? "\<CR>\<Esc>O" : "\<CR>"

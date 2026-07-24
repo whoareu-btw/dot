@@ -1,0 +1,25 @@
+{
+	"label": "lock",
+	"action": "swaylock -c 000000 & sleep 0.5 && systemctl suspend",
+	"text": "LockSusp"
+},
+{
+	"label": "lock"
+	"action": "swaylock -c 000000"
+	"text": "LockNoSusp"
+},
+{
+	"label": "logout",
+	"action": "swaymsg exit",
+	"text": "Sway exit"
+},
+{
+	"label": "shutdown"
+	"action": "systemctl poweroff",
+	"text": "Poweroff"
+},
+{
+	"label": "reboot"
+	"action": "systemctl reboot",
+	"text": "Reboot"
+}
