@@ -1,0 +1,120 @@
+themes {
+    micomet {
+        text_unselected {
+            base 230 242 255          // Putih-biru es (Suisei)
+            background 7 12 22         // Biru kosmos legam (Latar belakang)
+            emphasis_0 255 158 187     // Sakura Pink (Miko)
+            emphasis_1 77 171 247      // Biru Muda murni (Suisei)
+            emphasis_2 28 126 214      // Biru Kobalt pekat (Suisei)
+            emphasis_3 244 143 177     // Magenta Pink pekat (Miko)
+        }
+        text_selected {
+            base 230 242 255
+            background 28 126 214      
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 28 126 214
+            emphasis_3 244 143 177
+        }
+        ribbon_selected {
+            base 7 12 22
+            background 77 171 247      
+            emphasis_0 7 12 22
+            emphasis_1 255 158 187
+            emphasis_2 244 143 177
+            emphasis_3 28 126 214
+        }
+        ribbon_unselected {
+            base 230 242 255
+            background 20 26 38        
+            emphasis_0 7 12 22
+            emphasis_1 230 242 255
+            emphasis_2 77 171 247
+            emphasis_3 244 143 177
+        }
+        table_title {
+            base 28 126 214            
+            background 7 12 22
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 28 126 214
+            emphasis_3 244 143 177
+        }
+        table_cell_selected {
+            base 230 242 255
+            background 28 126 214
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 28 126 214
+            emphasis_3 244 143 177
+        }
+        table_cell_unselected {
+            base 230 242 255
+            background 7 12 22
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 28 126 214
+            emphasis_3 244 143 177
+        }
+        list_selected {
+            base 230 242 255
+            background 28 126 214
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 28 126 214
+            emphasis_3 244 143 177
+        }
+        list_unselected {
+            base 230 242 255
+            background 7 12 22
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 28 126 214
+            emphasis_3 244 143 177
+        }
+        frame_selected {
+            base 28 126 214            
+            background 7 12 22
+            emphasis_0 255 158 187
+            emphasis_1 77 171 247
+            emphasis_2 244 143 177
+            emphasis_3 7 12 22
+        }
+        frame_highlight {
+            base 255 158 187          // Sakura Pink Miko (Highlight)
+            background 7 12 22
+            emphasis_0 244 143 177
+            emphasis_1 255 158 187
+            emphasis_2 77 171 247
+            emphasis_3 28 126 214
+        }
+        exit_code_success {
+            base 77 171 247            
+            background 7 12 22
+            emphasis_0 77 171 247
+            emphasis_1 7 12 22
+            emphasis_2 244 143 177
+            emphasis_3 255 158 187
+        }
+        exit_code_error {
+            base 244 143 177           
+            background 7 12 22
+            emphasis_0 255 158 187
+            emphasis_1 7 12 22
+            emphasis_2 7 12 22
+            emphasis_3 7 12 22
+        }
+        multiplayer_user_colors {
+            player_1 255 158 187      
+            player_2 77 171 247       
+            player_3 244 143 177      
+            player_4 28 126 214
+            player_5 255 210 220
+            player_6 230 242 255
+            player_7 20 26 38
+            player_8 7 12 22
+            player_9 255 255 255
+            player_10 7 12 22
+        }
+    }
+}
