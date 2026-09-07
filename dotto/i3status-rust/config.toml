@@ -1,0 +1,31 @@
+icons_format = "{icon}"
+
+[icons]
+icons = "material-nf"
+
+[[block]]
+block = "time"
+interval = 5
+format = " 󰃶 $timestamp.datetime(f:'%A, %d %B %Y  %H:%M') "
+
+[[block]]
+block = "cpu"
+interval = 2
+format_alt = " $icon $frequency "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_used.eng(prefix:Mi) "
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "net"
+format = " $icon {$ssid|Wired} "
+[[block.click]]
+button = "left"
+cmd = "sh $HOME/.config/i3status-rust/nmtui.sh"
+
+[[block]]
+block = "battery"
