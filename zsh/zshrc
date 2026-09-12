@@ -36,9 +36,9 @@ PROMPT='%F{blue}%n@%m%f ✦  %F{cyan}%~%f
 #fi
 
 # Zellij
-#if [[ -z "$ZELLIJ" ]]; then
-#    exec zellij
-#fi
+if [[ -z "$ZELLIJ" ]]; then
+    exec zellij
+fi
 
 # Sudo
 alias lick='sudo'
@@ -59,6 +59,7 @@ alias tconf='nvim .tmux.conf'
 
 # Fastfetch
 alias ff='fastfetch'
+alias mf='microfetch'
 
 # Btop & htop
 alias b='btop'
