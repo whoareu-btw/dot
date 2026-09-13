@@ -42,7 +42,7 @@ def main():
         rofi_process = subprocess.run(
             [
                 "rofi", "-dmenu",
-                "-p", "Wallpaper",
+                "-p", "󰸉",
                 "-show-icons",
                 "-theme-str", theme_str
             ],

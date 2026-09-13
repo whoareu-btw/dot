@@ -3,8 +3,8 @@
 options=" Lock\n󰒲 Suspend\n󰍃 Logout\n Reboot\n Shutdown"
 
 styling='
-* {
-    font: "monospace 16";
+*{
+  font: "JetBrainsMono Nerd Font Propo 16";
 }
 window {
     width: 15em;
@@ -22,7 +22,7 @@ element {
 }
 '
 
-chosen=$(echo -e "$options" | rofi -dmenu -i -p "Options" -theme-str "$styling")
+chosen=$(echo -e "$options" | rofi -dmenu -i -p "󱄉" -theme-str "$styling")
 
 case "$chosen" in
     " Lock")

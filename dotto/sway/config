@@ -1,7 +1,7 @@
 ### Defaults
 set $mod Mod4
 set $term foot
-set $menu fuzzel
+set $menu $HOME/util/rofi.py
 
 ### Input configuration
 input "2:7:SynPS/2_Synaptics_TouchPad" {
@@ -135,6 +135,7 @@ bindsym Shift+Print exec sh -c 'grim -g "$(slurp)" ~/Pictures/Screenshots/area-$
 bindsym $mod+l exec swaylock -c 000000 & sleep 0.5 && systemctl suspend
 bindsym Alt+l exec $HOME/.config/sway/wallpicker.py
 bindsym $mod+w exec $HOME/.config/i3status-rust/nmtui.sh
+bindsym Alt+p exec $HOME/util/dev.py
 
 # Window
 client.focused #2a2a2a #2a2a2a #2a2a2a #2a2a2a #2a2a2a

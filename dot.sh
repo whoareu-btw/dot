@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 echo "Applying dotfiles ..."
@@ -14,5 +14,8 @@ cp vim/vimrc $HOME/.vimrc
 
 mkdir $HOME/Wallpapers
 cp Wallpaper/* $HOME/Wallpapers
+
+mkdir $HOME/util
+cp util/* $HOME/util
 
 echo "Done!"
