@@ -1,2 +1,12 @@
+configuration {
+    font: "Iosevka Nerd Font Propo 13";
+    lines: 7;
+    columns: 1;
+    terminal: "foot";
+    drun-display-format: "{name}";
+    display-drun: "✦ ";
+    show-icons: false;
+}
 
-@theme "/nix/store/yb2z62w6i6rsvn3anzxl1rlhaq026ayr-rofi-2.0.0/share/rofi/themes/android_notification.rasi"
+@theme "~/.config/rofi/colors.rasi"
+
