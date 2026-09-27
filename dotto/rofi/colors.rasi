@@ -1,0 +1,76 @@
+* {
+    /* Konversi dari background=09111bee & selection=14304dcc */
+    background:      #09111BEE;
+    background-alt:  #14304DCC;
+    foreground:      #FFFFFF;
+    selected:        #14304DCC;
+    active:          #09111BEE;
+    urgent:          #DA4453FF;
+
+    text-color:      @foreground;
+    background-color: transparent;
+}
+
+window {
+    transparency: "real";
+    width: 32em;
+    background-color: @background;
+    border: 1px;
+    border-color: @background-alt;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+mainbox {
+    spacing: 10px;
+    background-color: transparent;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    spacing: 10px;
+    background-color: transparent;
+    text-color: @foreground;
+    children: [prompt, entry];
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Type to filter...";
+    placeholder-color: #555555;
+}
+
+listview {
+    background-color: transparent;
+    margin: 5px 0px 0px 0px;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    text-color: @foreground;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @foreground;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}

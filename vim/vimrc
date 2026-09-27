@@ -1,0 +1,38 @@
+" Options
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+set smartindent
+set termguicolors
+
+" Autopairs
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+
+inoremap <expr> <CR> getline('.')[col('.')-2:col('.')-1] ==# '{}' ? "\<CR>\<Esc>O" : "\<CR>"
+
+
+" Theme
+set number
+set background=dark
+highlight Normal guibg=#000000
+highlight NormalNC guibg=#000000
+set cursorline
+
+augroup SuiseiVim
+  autocmd!
+  autocmd ColorScheme * highlight CursorLineNr guifg=#5EBCF6 gui=bold
+  autocmd ColorScheme * highlight NonText guifg=#5EBCF6
+  autocmd ColorScheme * highlight CursorLine guibg=#161616
+augroup END
+
+highlight LineNr guifg=#5EBCF6
+highlight CursorLineNr guifg=#5EBCF6 gui=bold cterm=bold
+highlight CursorLine guibg=#161616 gui=NONE cterm=NONE
+highlight NonText guifg=#5EBCF6
