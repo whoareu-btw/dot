@@ -1,0 +1,11 @@
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=labwc &
+[ -f "$HOME/.cache/current_wall" ] && swaybg -m fill -i "$(cat "$HOME/.cache/current_wall")" >/dev/null 2>&1 &
+swayidle -w \
+  timeout 300 'swaylock -f -c 000000' \
+  timeout 600 'wlopm --off "*"' \
+  resume 'wlopm --on "*"' \
+  before-sleep 'swaylock -f -c 000000' &
+qs &
+nm-applet &
+notify-rs daemon --theme retro >"$XDG_RUNTIME_DIR/notify-rs.log" 2>&1 &
+fcitx5 -d -r &

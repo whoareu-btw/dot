@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <desktops number="5" />
+
+  <!-- Scroll -->
+  <mouse>
+    <default />
+      <context name="Root">
+        <mousebind direction="Up" action="Scroll">
+          <action name="None" />
+        </mousebind>
+        <mousebind direction="Down" action="Scroll">
+          <action name="None" />
+        </mousebind>
+      </context>
+  </mouse>
+
+  <!-- Touchpad -->
+  <libinput>
+    <device category="touchpad">
+      <accelProfile>flat</accelProfile>
+      <pointerSpeed>0.5</pointerSpeed>
+      <naturalScroll>yes</naturalScroll>
+    </device>
+    <device category="non-touch">
+      <accelProfile>flat</accelProfile>
+      <pointerSpeed>0.0</pointerSpeed>
+    </device>
+  </libinput>
+
+  <!-- Theme/font -->
+  <theme>
+    <font place="ActiveWindow" name="JetBrainsMono Nerd Font Mono" size="11" weight="bold" />
+    <font place="InactiveWindow" name="JetBrainsMono Nerd Font Mono" size="11" />
+    <font place="MenuItem" name="JetBrainsMono Nerd Font Mono" size="10" />
+    <font place="OnScreenDisplay" name="JetBrainsMono Nerd Font Mono" size="10" />
+  </theme>
+  
+  <keyboard>
+    <default />
+
+    <!-- Unbind -->
+    <keybind key="A-F4" />
+
+    <!-- Workspace keybinds -->
+    <keybind key="W-1"><action name="GoToDesktop" to="1"/></keybind>
+    <keybind key="W-2"><action name="GoToDesktop" to="2"/></keybind>
+    <keybind key="W-3"><action name="GoToDesktop" to="3"/></keybind>
+    <keybind key="W-4"><action name="GoToDesktop" to="4"/></keybind>
+    <keybind key="W-5"><action name="GoToDesktop" to="5"/></keybind>
+
+    <keybind key="W-S-1"><action name="SendToDesktop" to="1" follow="no"/></keybind>
+    <keybind key="W-S-2"><action name="SendToDesktop" to="2" follow="no"/></keybind>
+    <keybind key="W-S-3"><action name="SendToDesktop" to="3" follow="no"/></keybind>
+    <keybind key="W-S-4"><action name="SendToDesktop" to="4" follow="no"/></keybind>
+    <keybind key="W-S-5"><action name="SendToDesktop" to="5" follow="no"/></keybind>
+
+    <!-- Snap and unsnap window -->
+    <keybind key="W-h"><action name="SnapToEdge" direction="left"/></keybind>
+    <keybind key="W-j"><action name="SnapToEdge" direction="down"/></keybind>
+    <keybind key="W-k"><action name="SnapToEdge" direction="up"/></keybind>
+    <keybind key="W-l"><action name="SnapToEdge" direction="right"/></keybind>
+
+    <keybind key="A-d"><action name="UnSnap"/></keybind>
+
+    <!-- Minimize, maximize and restore -->
+    <keybind key="A-h"><action name="Iconify"/></keybind>
+
+    <keybind key="W-f"><action name="ToggleMaximize"/></keybind>
+
+    <keybind key="A-k"><action name="NextWindow"/></keybind>
+
+    <!-- <keybind key="A-S-j"><action name="PreviousWindow"/></keybind> -->
+
+    <!-- Launchers -->
+    <keybind key="W-q">
+      <action name="Execute" command="kitty" />
+    </keybind>
+    <keybind key="W-d">
+      <action name="Execute" command="~/util/rofiwmaker.py" />
+    </keybind>
+
+    <!-- Audio -->
+    <keybind key="F3">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+    </keybind>
+    <keybind key="F2">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+    </keybind>
+    <keybind key="F1">
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+    </keybind>
+    <keybind key="F4">
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" />
+    </keybind>
+
+    <!-- Brightness -->
+    <keybind key="F5" allowWhenLocked="yes">
+      <action name="Execute" command="brightnessctl set 5%-" />
+    </keybind>
+    <keybind key="F6" allowWhenLocked="yes">
+      <action name="Execute" command="brightnessctl set 5%+" />
+    </keybind>
+
+    <!-- Close window -->
+    <keybind key="W-S-q">
+      <action name="Close" />
+    </keybind>
+
+    <!-- Screenshots, change wallpaper, suspend and exit -->
+    <keybind key="Print">
+      <action name="Execute">
+        <command>~/.config/labwc/screenshot-full.sh</command>
+      </action>
+    </keybind>
+    
+    <keybind key="S-Print">
+      <action name="Execute">
+        <command>~/.config/labwc/screenshot-area.sh</command>
+      </action>
+    </keybind>
+    
+    <keybind key="A-l">
+      <action name="Execute">
+        <command>~/util/wallpicker.py</command>
+      </action>
+    </keybind>
+
+    <keybind key="W-s">
+      <action name="Execute" command="systemctl suspend"/>
+    </keybind>
+
+    <keybind key="W-Escape">
+      <action name="Execute">
+        <command>~/util/exit.sh</command>
+      </action>
+    </keybind>
+    
+  </keyboard>
+
+  <windowRules>
+    <windowRule identifier="kitty" serverDecoration="no" />
+  </windowRules>
+
+</labwc_config>

@@ -1,0 +1,56 @@
+# Plugins
+#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -Uz compinit
+compinit
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000000
+SAVEHIST=10000000
+
+# Setopt
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt AUTO_CD
+
+# Bindkey
+bindkey -e
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Prompt
+autoload -Uz colors && colors
+PROMPT='%F{blue}%n@%m%f ✦  %F{cyan}%~%f
+❯ '
+
+# Tmux
+#if [[ -z "$TMUX" && -n "$PS1" ]]; then
+#	if tmux has-session 2>/dev/null; then
+#		exec tmux attach-session
+#	else
+#		exec tmux new-session
+#	fi
+#fi
+
+# Zellij
+#if [[ -z "$ZELLIJ" ]]; then
+#    exec zellij
+#fi
+
+# Sudo
+alias lick='sudo'
+
+# Ls
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Fastfetch
+alias ff='fastfetch'
+alias mf='microfetch'
+
+# Btop & htop
+alias b='btop'
+alias h='htop'

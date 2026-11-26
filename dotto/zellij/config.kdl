@@ -1,0 +1,36 @@
+simplified_ui true
+pane_frames false
+default_layout "compact"
+welcome_screen false
+attach_to_session true
+show_startup_tips false
+on_force_close "detach" 
+// copy_command "wl-copy"
+session_name "sui-chan"
+
+keybinds clear-defaults=true {
+    
+    shared_except "locked" "tmux" {
+        unbind "Ctrl b"
+        bind "Alt w" { SwitchToMode "Tmux"; }
+        bind "Alt q" { CloseFocus; SwitchToMode "Normal"; }
+        bind "Alt Esc" { Quit; }
+    }
+
+    tmux {
+        unbind "Ctrl b" 
+        bind "Alt w" { SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "[" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "]" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "j" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "k" { MoveFocus "Down"; SwitchToMode "Normal";}
+        bind "l" { MoveFocus "Right"; SwitchToMode "Normal";}
+    }
+
+}
+
+theme "micomet"
+theme_dir "/home/haru/.config/zellij/themes"
+

@@ -1,0 +1,12 @@
+configuration {
+    font: "JetBrainsMono Nerd Font Propo 13";
+    lines: 7;
+    columns: 1;
+    terminal: "foot";
+    drun-display-format: "{name}";
+    display-drun: "✦ ";
+    show-icons: false;
+}
+
+@theme "~/.config/rofi/colors.rasi"
+
